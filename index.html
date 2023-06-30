@@ -10,5 +10,20 @@
 	<div id="PDFDIV">
 	</div>
 </body>
-<script>PDFObject.embed("pdf/C.V.pdf", "#PDFDIV");</script>
+<script>
+  var userAgent = navigator.userAgent.toLowerCase();
+
+  if (userAgent.indexOf('android') !== -1 || userAgent.indexOf('iphone') !== -1 || userAgent.indexOf('ipad') !== -1) {
+    var pdfURL = 'pdf/C.V.pdf';
+    var link = document.createElement('a');
+    link.href = pdfURL;
+    link.target = '_blank';  // Open the PDF in a new tab/window
+    link.style.display = 'none';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  } else {
+    PDFObject.embed("pdf/C.V.pdf", "#PDFDIV");
+  }
+</script>
 </html>
