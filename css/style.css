@@ -1,16 +1,24 @@
-.pdfobject-container {
-	height: -webkit-fill-available;
-	width: -webkit-fill-available;
-	}
-		
+.pdf-container {
+  height: -webkit-fill-available;
+  width: -webkit-fill-available;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+embed {
+  height: -webkit-fill-available;
+  width: -webkit-fill-available;
+}
+
 body {
-	height: -webkit-fill-available;
-	width: -webkit-fill-available;
-	margin:0;
-	}
-		
+  height: -webkit-fill-available;
+  width: -webkit-fill-available;
+  margin: 0;
+}
+
 html {
-	height: -webkit-fill-available;
-	width: -webkit-fill-available;
-	margin:0;
-	}
+  height: -webkit-fill-available;
+  width: -webkit-fill-available;
+  margin: 0;
+}
